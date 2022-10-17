@@ -1,0 +1,43 @@
+#Emperor Stig Passes Away Hirohito succeds
+add_namespace = newleader
+
+country_event = {
+    id = newleader.1
+    title = "Hirohito succeds Stig as emperor"
+    desc = newleader.1.d
+    picture = GFX_report_event_chinese_japanese_handshake
+	
+	is_triggered_only = no
+
+    trigger = {
+		tag = JAP
+		282 = { is_owned_by = JAP }
+        NOT = {
+            282 = { is_controlled_by = JAP }
+            has_country_flag = newleader
+        }
+    }
+
+    option = { 
+        name = "Hirohito shall lead us to victory!"
+        kill_country_leader = yes
+        retire_character = JAP_sutsigu_sumaejiri_gen
+        create_country_leader = {
+            name = JAP_emperor_hirohito
+		desc = "POLITICS_Hirohito_DESC"
+		picture = "Portrait_Japan_Hirohito.dds"
+		expire = "1989.1.1"
+		ideology = fascism_ideology
+		traits = {
+			warrior_code
+			emperor_showa
+			imperial_sanction
+			inexperienced_monarch
+		}
+                
+        }
+        set_country_flag = newleader
+    }
+        
+        
+}
