@@ -59,7 +59,7 @@
 	}
 
 	focus = {
-		id = JAP_the_mysterious_man_gets_real
+		id = JAP_support_stig
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = JAP_the_mysterious_man }
 		x = 1
@@ -90,7 +90,7 @@
 	}
 
 	focus = {
-		id = JAP_the_mysterious_man_great_speech
+		id = JAP_prepar_stig
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = JAP_the_mysterious_man }
 		x = -1
@@ -123,11 +123,11 @@
 	focus = {
 		id = JAP_the_coup
 		icon = GFX_focus_jap_showa_restoration
-		prerequisite = { focus = JAP_the_mysterious_man_great_speech }
-		prerequisite = { focus = JAP_the_mysterious_man_gets_real }
+		prerequisite = { focus = JAP_prepar_stig }
+		prerequisite = { focus = JAP_support_stig }
 		x = 1
 		y = 1
-		relative_position_id = JAP_the_mysterious_man_great_speech
+		relative_position_id = JAP_prepar_stig
 		cost = 10
 
 		ai_will_do = {
@@ -152,6 +152,156 @@
 			add_manpower = -1000000
 		}
 	}
+
+	focus = {
+		id = JAP_the_crew_togther
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_the_coup }
+		y = 1
+		relative_position_id = JAP_the_coup
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_the_clark
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_the_crew_togther }
+		y = 1
+		x = -2
+		relative_position_id = JAP_the_crew_togther
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_capten_slow
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_the_crew_togther }
+		y = 1
+		relative_position_id = JAP_the_crew_togther
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_the_ham
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_the_crew_togther }
+		y = 1
+		x = 2
+		relative_position_id = JAP_the_crew_togther
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_bottum_gear
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_the_ham }
+		prerequisite = { focus = JAP_capten_slow }
+		prerequisite = { focus = JAP_the_clark }
+		y = 1
+		relative_position_id = JAP_capten_slow
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
 
 	focus = {
 		id = JAP_the_unthinkable_option
