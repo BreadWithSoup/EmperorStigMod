@@ -156,7 +156,7 @@
 	}
 
 	focus = {
-		id = JAP_the_crew_togther
+		id = JAP_the_crew_together
 		icon = GFX_focus_jap_showa_restoration
 		prerequisite = { focus = JAP_the_stig }
 		y = 1
@@ -274,7 +274,7 @@
 	}
 
 	focus = {
-		id = JAP_bottum_gear
+		id = JAP_bottom_gear
 		icon = GFX_focus_jap_showa_restoration
 		prerequisite = { focus = JAP_the_hamster }
 		prerequisite = { focus = JAP_captain_slow }
@@ -309,7 +309,7 @@
 
 
 	focus = {
-		id = JAP_the_japanis_tour
+		id = JAP_the_japanese_tour
 		icon = GFX_focus_jap_showa_restoration		
 		prerequisite = { focus = JAP_bottum_gear }
 		y = 1
@@ -428,7 +428,7 @@
 	}
 
 	focus = {
-		id = JAP_tour_russa
+		id = JAP_tour_russia
 		icon = GFX_focus_jap_showa_restoration
 		prerequisite = { focus = JAP_tour_china }
 		y = 1
@@ -516,7 +516,7 @@
 	}
 
 	focus = {
-		id = JAP_tour_home_again
+		id = JAP_home_again
 		icon = GFX_focus_jap_showa_restoration
 		prerequisite = { focus = JAP_tour_UK }
 		y = 1
@@ -545,7 +545,7 @@
 	}
 
 	focus = {
-		id = JAP_tour_fillepines
+		id = JAP_tour_philippines
 		icon = GFX_focus_jap_showa_restoration
 		prerequisite = { focus = JAP_tour_china }
 		y = 1
@@ -753,7 +753,7 @@
 	}
 
 	focus = {
-		id = JAP_believe_mays
+		id = JAP_mays_plan
 		icon = GFX_focus_jap_showa_restoration
 		prerequisite = { focus = JAP_even_more_cars }
 		y = 1
@@ -978,7 +978,7 @@
 	}
 
 	focus = {
-		id = JAP_more_efficent
+		id = JAP_more_efficient
 		icon = GFX_focus_jap_showa_restoration			
 		prerequisite = { focus = JAP_even_smaller focus = JAP_more_durable focus = JAP_the_fastest }
 		y = 1
