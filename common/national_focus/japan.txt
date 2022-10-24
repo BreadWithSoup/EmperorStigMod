@@ -13,7 +13,9 @@
 	default = no
 
 	continuous_focus_position = { x = 20 y = 1200 }
-
+	#----------------------------------------------------------------------------#
+									#The stig mod
+	#----------------------------------------------------------------------------#
 	focus = {
 		id = JAP_the_mysterious_man
 		icon = GFX_goal_support_communism
@@ -90,7 +92,7 @@
 	}
 
 	focus = {
-		id = JAP_prepar_stig
+		id = JAP_prepare_stig
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = JAP_the_mysterious_man }
 		x = -1
@@ -121,13 +123,13 @@
 	}
 
 	focus = {
-		id = JAP_the_coup
+		id = JAP_the_stig
 		icon = GFX_focus_jap_showa_restoration
-		prerequisite = { focus = JAP_prepar_stig }
+		prerequisite = { focus = JAP_prepare_stig }
 		prerequisite = { focus = JAP_support_stig }
 		x = 1
 		y = 1
-		relative_position_id = JAP_prepar_stig
+		relative_position_id = JAP_prepare_stig
 		cost = 10
 
 		ai_will_do = {
@@ -156,9 +158,9 @@
 	focus = {
 		id = JAP_the_crew_togther
 		icon = GFX_focus_jap_showa_restoration
-		prerequisite = { focus = JAP_the_coup }
+		prerequisite = { focus = JAP_the_stig }
 		y = 1
-		relative_position_id = JAP_the_coup
+		relative_position_id = JAP_the_stig
 		cost = 10
 
 		ai_will_do = {
@@ -183,7 +185,7 @@
 	}
 
 	focus = {
-		id = JAP_the_clark
+		id = JAP_the_orangutan
 		icon = GFX_focus_jap_showa_restoration
 		prerequisite = { focus = JAP_the_crew_togther }
 		y = 1
@@ -213,7 +215,7 @@
 	}
 
 	focus = {
-		id = JAP_capten_slow
+		id = JAP_captain_slow
 		icon = GFX_focus_jap_showa_restoration
 		prerequisite = { focus = JAP_the_crew_togther }
 		y = 1
@@ -242,7 +244,7 @@
 	}
 
 	focus = {
-		id = JAP_the_ham
+		id = JAP_the_hamster
 		icon = GFX_focus_jap_showa_restoration
 		prerequisite = { focus = JAP_the_crew_togther }
 		y = 1
@@ -274,11 +276,11 @@
 	focus = {
 		id = JAP_bottum_gear
 		icon = GFX_focus_jap_showa_restoration
-		prerequisite = { focus = JAP_the_ham }
-		prerequisite = { focus = JAP_capten_slow }
-		prerequisite = { focus = JAP_the_clark }
+		prerequisite = { focus = JAP_the_hamster }
+		prerequisite = { focus = JAP_captain_slow }
+		prerequisite = { focus = JAP_the_orangutan }
 		y = 1
-		relative_position_id = JAP_capten_slow
+		relative_position_id = JAP_captain_slow
 		cost = 10
 
 		ai_will_do = {
@@ -301,6 +303,776 @@
 		completion_reward = {
 		}
 	}
+	#------------------------------------------------------------------------------------#
+										#left path
+	#------------------------------------------------------------------------------------#
+
+
+	focus = {
+		id = JAP_the_japanis_tour
+		icon = GFX_focus_jap_showa_restoration		
+		prerequisite = { focus = JAP_bottum_gear }
+		y = 1
+		x = -2
+		relative_position_id = JAP_bottum_gear
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	
+
+	focus = {
+		id = JAP_understand_japan
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_the_japanis_tour }
+		y = 1
+		relative_position_id = JAP_the_japanis_tour
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_the_grand_tour
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_understand_japan }
+		y = 1
+		relative_position_id = JAP_understand_japan
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_tour_china
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_the_grand_tour }
+		y = 1
+		relative_position_id = JAP_the_grand_tour
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_tour_russa
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_tour_china }
+		y = 1
+		x = -1
+		relative_position_id = JAP_tour_china
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_tour_germany
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_tour_russa }
+		y = 1
+		relative_position_id = JAP_tour_russa
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_tour_UK
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_tour_germany }
+		y = 1
+		relative_position_id = JAP_tour_germany
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_tour_home_again
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_tour_UK }
+		y = 1
+		relative_position_id = JAP_tour_UK
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_tour_fillepines
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_tour_china }
+		y = 1
+		x = 1
+		relative_position_id = JAP_tour_china
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = JAP_tour_south_east_asia
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_tour_fillepines }
+		y = 1
+		relative_position_id = JAP_tour_fillepines
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_more_resourses
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_tour_south_east_asia }
+		y = 1
+		relative_position_id = JAP_tour_south_east_asia
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+	#------------------------------------------------------------------------------------#
+										#middle path
+	#------------------------------------------------------------------------------------#
+
+	focus = {
+		id = JAP_more_cars
+		icon = GFX_focus_jap_showa_restoration	 
+		prerequisite = { focus = JAP_bottum_gear }
+		y = 1
+		x = 2
+		relative_position_id = JAP_bottum_gear
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_more_drivers
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_more_cars }
+		y = 1
+		relative_position_id = JAP_more_cars
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_the_producer
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_more_drivers }
+		y = 1
+		relative_position_id = JAP_more_drivers
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_even_more_cars
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_the_producer }
+		y = 1
+		relative_position_id = JAP_the_producer
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_believe_mays
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_even_more_cars }
+		y = 1
+		x = -1
+		relative_position_id = JAP_even_more_cars
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_the_hammond_spirit
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_even_more_cars }
+		y = 1
+		x = 1
+		relative_position_id = JAP_even_more_cars
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_trust_clakson
+		icon = GFX_focus_jap_showa_restoration
+		prerequisite = { focus = JAP_believe_mays }
+		prerequisite = { focus = JAP_the_hammond_spirit }
+		y = 1
+		x = 1
+		relative_position_id = JAP_believe_mays
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+#-------------------------------------------------------------------------------------#
+									#right path
+#-------------------------------------------------------------------------------------#
+	focus = {
+		id = JAP_find_the_film_crew
+		icon = GFX_focus_jap_showa_restoration			
+		prerequisite = { focus = JAP_bottum_gear }
+		y = 1
+		x = 6
+		relative_position_id = JAP_bottum_gear
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_the_fastest
+		icon = GFX_focus_jap_showa_restoration		
+		mutually_exclusive = {
+			focus = JAP_more_durable
+			focus = JAP_even_smaller
+		}	
+		prerequisite = { focus = JAP_find_the_film_crew }
+		y = 1
+		x = -2
+		relative_position_id = JAP_find_the_film_crew
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_more_durable
+		icon = GFX_focus_jap_showa_restoration	
+		mutually_exclusive = {
+			focus = JAP_the_fastest
+			focus = JAP_even_smaller
+		}			
+		prerequisite = { focus = JAP_find_the_film_crew }
+		y = 1
+		relative_position_id = JAP_find_the_film_crew
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_even_smaller
+		icon = GFX_focus_jap_showa_restoration		
+		mutually_exclusive = {
+			focus = JAP_the_fastest
+			focus = JAP_more_durable
+		}		
+		prerequisite = { focus = JAP_find_the_film_crew }
+		y = 1
+		x = 2
+		relative_position_id = JAP_find_the_film_crew
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_more_efficent
+		icon = GFX_focus_jap_showa_restoration			
+		prerequisite = { focus = JAP_even_smaller focus = JAP_more_durable focus = JAP_the_fastest }
+		y = 1
+		x = 1
+		relative_position_id = JAP_more_durable
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_more_fuel
+		icon = GFX_focus_jap_showa_restoration			
+		prerequisite = { focus = JAP_even_smaller focus = JAP_more_durable focus = JAP_the_fastest }
+		y = 1
+		x = -1
+		relative_position_id = JAP_more_durable
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = JAP_the_heavy_cars
+		icon = GFX_focus_jap_showa_restoration			
+		prerequisite = { focus = JAP_more_efficent  }
+		prerequisite = { focus = JAP_more_fuel  }
+		y = 1
+		x = -1
+		relative_position_id = JAP_more_efficent
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	
+
+	#-----------------------------------------------------------------------------------------#
+										#Normal focus tree
+	#-----------------------------------------------------------------------------------------#
 
 
 	focus = {
